@@ -147,6 +147,9 @@ img.suggest {
     font-size: min(2.43vw,35px);
     font-weight: 300;
 }
+.content2 a:link {
+    color: white;
+}
 .suggest_seminars {
     margin-top: min(8.85vw,127.5px);
 }
@@ -229,7 +232,7 @@ img.suggest {
     width: min(41.875vw,603px);
     height: min(12.3vw,177px);
     z-index: 10;
-    padding: min(1.53vw,22px) 0 0 min(1.875vw,27px);
+    padding: min(1.53vw,7px) 0 0 min(1.875vw,11px);
 } 
 .day_and_time {
     letter-spacing: 0.135em;
@@ -237,7 +240,7 @@ img.suggest {
 }
 h5.smnr_title {
     font-size: min(1.586vw,22.8372px);
-    letter-spacing: 0.135em;
+    letter-spacing: 0.05em;
 }
 .smnr_explain {
     font-size: min(0.947vw,13.632px);
@@ -246,7 +249,6 @@ h5.smnr_title {
     border: 2px solid #004098;
     border-radius: 5.45281px;
     padding: min(0.607vw,8.75px) min(0.653vw,9.4px) 0 min(0.785vw,11.3px);
-    letter-spacing: 0.135em;
     font-weight: 500;
     margin: min(0.9vw,13px) 0;
     float: left;
@@ -659,10 +661,10 @@ img.FAQ {
   }
   .title::after,
   .title::before {
-    bottom:min(4.097vw,59px);
-    right:min(2.5vw,36px);
-    width:0.3vw;
-    border-bottom: solid 2vw;
+    top: 0;
+    right: 5vw;
+    width: 0.5vw;
+    border-bottom: solid 3vw;
   }
   
   title::after,
@@ -1055,7 +1057,7 @@ img.FAQ {
     .seminar1_img {
         top: 7.692vw;
         left: 10.769vw;
-        width: 32.564vw;
+        width: 27.564vw;
         height: auto;
     }
     .seminar2_img {
@@ -1254,7 +1256,7 @@ img.FAQ {
         height: auto;
         margin-left: 2.22vw;
         margin-bottom: -2.5vw;
-        margin-top: 12.5vw;
+        margin-top: 13vw;
     }
     
     .content4 {
@@ -1301,7 +1303,8 @@ img.FAQ {
     .point2 img {
         width: 32.564vw;
         height: auto;
-        margin: auto;
+        margin-left: 3.513vw;
+        margin-top: 0;
     }
     .point3 {
         width: 50%;
@@ -1310,8 +1313,8 @@ img.FAQ {
     .point3 img {
         width: 32.564vw;
         height: auto;
-        margin: auto;
-        margin-top: 6.026vw;
+        margin-top: 4.026vw;
+        margin-left: 3vw;
     }
     .points h3 {
         font-size: 3.436vw;
@@ -1319,7 +1322,7 @@ img.FAQ {
     }
     .sp_points_lower {
         display: flex;
-        margin-top: 11vw;
+        margin-top: 16vw;
     }
     
     .content5 {
@@ -1365,7 +1368,7 @@ img.FAQ {
         padding-bottom: 28.974vw;
     }
     .review_card p {
-        font-size: 2.821vw;
+        font-size: max(2.821vw,11px);
         margin-top: 3vw;
         height: auto;
         letter-spacing: 0.055em;
@@ -1445,7 +1448,7 @@ img.FAQ {
         height: auto;
     }
     .FAQ_content {
-        border: 6px solid #004098;
+        border: 5px solid #004098;
         border-radius: 10px;
         margin: min(4.028vw,58px) 0;
     }
@@ -1462,16 +1465,16 @@ img.FAQ {
         font-weight: 700;
     }
     .question {
-        font-size: 2.882vw;
+        font-size: max(2.882vw,12px);
         line-height: 129%;
-        width: 52.487vw;
+        width: 55vw;
         height: auto;
         margin-left: min(11.367vw,163.68px);
         margin-bottom: min(2.639vw,38px);
         margin-top: min(2.917vw,42px);
     }
     .FAQ_answer {
-        font-size: 2.487vw;
+        font-size: max(2.487vw,11px);
         line-height: 134%;
         margin-left: min(11.367vw,163.68px);
         width: 55.385vw;
@@ -1485,7 +1488,7 @@ img.FAQ {
         margin: auto;
         margin-top: min(9.792vw,141px);
         margin-bottom: min(6.181vw,89px);
-        width: 62.564vw;
+        width: 82vw;
         height: auto;
     }
     .cta_fixed_area {
@@ -1493,11 +1496,15 @@ img.FAQ {
         margin: 0 auto;
         z-index: 10;
         bottom: 15px;
-        left: 17.949vw;
+        left: 0;
+        width: 100%;
     }
     .cta_area img,.cta_fixed_area img {
-        width: 100%;
+        width: 82vw;
         height: auto;
+        margin: auto;
     }
-
+    .cta_fixed_area img {
+        margin-left: 9vw;
+    }
 }
