@@ -22,10 +22,10 @@
         <meta name="description" content="クレディセゾンでは、セゾンマネースクールを実施しております。アットホームで初心者にも分かりやすくお金のことについて説明いたします。参加費も無料ですので、ぜひお気軽にご参加ください。">
         <meta name="keywords" content="マネースクール,お金,参加費無料,マネースクール,マネープラン,資産運用,年金,NISA,iDeCo,保険,生命保険">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="moneyschool_lp_stylesheet.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize-css@2.3.1/normalize.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/common.css">
+        <link rel="stylesheet" href="moneyschool_lp_stylesheet.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
@@ -124,32 +124,33 @@
             <div class="content1_title">
                 <h2>こんな方に<span><img class="participate" src="images/PARTICIPATE.png" alt="ご参加"></span>いただいております</h2>
             </div>
-            <div class="content1_cases">
-                <div class="slick carousel">
-                    <div>
-                        <div class="case1 item">
-                            <p>日中は仕事が忙しくて<br>
-                                時間が取れない
-                            </p>
-                            <picture>
-                                <source srcset="images/busyworker.webp" type="image/webp" />
-                                <img src="images/busyworker.png" alt="電車通勤している女性のイラスト">
-                            </picture>
+            <div class="content1_cases sample-swiper carousel">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="case1 item">
+                                <p>日中は仕事が忙しくて<br>
+                                    時間が取れない
+                                </p>
+                                <picture>
+                                    <source srcset="images/busyworker.webp" type="image/webp" />
+                                    <img src="images/busyworker.png" alt="電車通勤している女性のイラスト">
+                                </picture>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="case2 item">
-                            <p>家事をしながら<br>
-                                できたらいいのにな                        
-                            </p>
-                            <picture>
-                                <source srcset="images/houseworker.webp" type="image/webp" />
-                                <img src="images/houseworker.png" alt="赤ちゃんを抱っこしている女性のイラスト">
-                            </picture>
+                        <div class="swiper-slide">
+                            <div class="case2 swiper-slide">
+                                <p>家事をしながら<br>
+                                    できたらいいのにな                        
+                                </p>
+                                <picture>
+                                    <source srcset="images/houseworker.webp" type="image/webp" />
+                                    <img src="images/houseworker.png" alt="赤ちゃんを抱っこしている女性のイラスト">
+                                </picture>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="case3 item">
+                        <div class="swiper-slide">
+                            <div class="case3 swiper-slide">
                             <p>詳しく話を聞いたり<br>
                                 わからないこと<br>
                                 質問したいな
@@ -157,22 +158,87 @@
                             <picture>
                                 <source srcset="images/morelearner.webp" type="image/webp" />
                                 <img src="images/morelearner.png" alt="質問をしている男性2人のイラスト">
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <script type="text/javascript">
-  $(document).ready(() => {
-    $(".slick").slick({
-      infinite: true, // ループの有効化
-      dots: true, // ドットインジケーターの表示
-    });
-  });
-  </script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script type="text/javascript">
+          const defaultOptions = {
+            // ドットインジケーターの表示
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            // 前後スライドボタンを表示
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            loop: true, // ループの有効化
+          }
+          
+          // デフォルトの表示
+          const swiper = new Swiper(".sample-swiper .swiper-container", {
+            ...defaultOptions,
+          });
+      
+            // フェードエフェクト
+        const swiperFade = new Swiper(".sample-swiper-fade .swiper-container", {
+          ...defaultOptions,
+          
+          effect: "fade",
+          fadeEffect: {
+              crossFade: true
+            },
+          });
+          
+          // カバーフローエフェクト
+          const swiperCoverflow = new Swiper(".sample-swiper-coverflow .swiper-container", {
+            ...defaultOptions,
+            
+            loop: true, // ループの有効化
+            slidesPerView: 1.6, // 表示するスライドの枚数
+            centeredSlides : true, // スライドを中央揃えを有効化
+            effect: "coverflow",
+            coverflowEffect: {
+              rotate: 0, // スライドの回転角度
+              stretch: 50, // スライドの間隔（px単位）
+              depth: 200, // 奥行きの設定（translateをZ方向にpx単位で移動）
+              slideShadows : true, // 先頭スライドの影を有効化
+            },
+          });
+          
+          // カードエフェクト
+          const swiperCards = new Swiper(".sample-swiper-cards .swiper-container", {
+            ...defaultOptions,
+            
+            grabCursor: true,
+            effect: "cards",
+          });
+          
+          // クリエイティブエフェクト
+          const swiperCreative = new Swiper(".sample-swiper-creative .swiper-container", {
+            ...defaultOptions,
+            
+            grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+              prev: { // 表示しているスライドの移動先
+                shadow: true, // 影の有効化
+                translate: [0, 0, -400], // translateをX,Y,Zで指定
+              },
+              next: { // 次に表示されるスライドの設定
+                translate: ["100%", 0, 0], // translateをX,Y,Zで指定
+              },
+            },
+          });
+          </script>
 
         <div class="content2">
             <div class="content2_title">
@@ -570,7 +636,7 @@
             </div>
             
             <div class="cta_area">
-                <a href="https://area34.smp.ne.jp/area/table/22175/IGcBAk/M?S=ojmcr2tjodt" target="blank_"><img src="images/btn_cta.png"></a>
+                <a href="https://area34.smp.ne.jp/area/table/22175/IGcBAk/M?S=ojmcr2tjodt" target="blank_"><img src="images/btn_cta.png" alt="開催日程・申し込みはこちら"></a>
             </div>
             <script>  window.addEventListener("scroll", function () {
                 const topBtn = document.getElementById("cta_fixed_area");
@@ -581,7 +647,7 @@
               });
               </script>
             <div class="cta_fixed_area" id="cta_fixed_area">
-                <a href="https://area34.smp.ne.jp/area/table/22175/IGcBAk/M?S=ojmcr2tjodt" target="blank_"><img src="images/btn_cta.png"></a>
+                <a href="https://area34.smp.ne.jp/area/table/22175/IGcBAk/M?S=ojmcr2tjodt" target="blank_"><img src="images/btn_cta.png" alt="開催日程・申し込みはこちら"></a>
             </div>
             <div class="footerbar"></div>
     <footer class="footer">  
@@ -634,6 +700,6 @@
         });
         </script>
         <!-- end -->
-    
+    <script src="moneyschool_lp.js"></script>
     </body>
     </html>
