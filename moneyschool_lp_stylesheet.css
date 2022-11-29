@@ -479,7 +479,7 @@ h5.smnr_title {
 }
 .review_card h3 {
     float: left;
-    width: min(13.403vw,193px);
+    width: min(12vw,172.8px);
     font-size: min(1.736vw,25px);
     line-height: 132%;
     text-align: center;
@@ -502,7 +502,7 @@ h5.smnr_title {
 .review_card img {
     position: absolute;
     bottom: 0;
-    left: min(3.333vw,48px);
+    left: min(2.5vw,36px);
     width: min(6.944vw,100px);
 }
 
@@ -617,6 +617,7 @@ img.FAQ {
     z-index: 10;
     bottom: 15px;
     left: min(24.583vw,354px);
+    opacity: 0;
 }
 .cta_area img,.cta_fixed_area img {
     width: 100%;
