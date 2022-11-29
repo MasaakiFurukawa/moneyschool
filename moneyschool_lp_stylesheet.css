@@ -941,9 +941,7 @@ img.FAQ {
     .case1,.case2 {
         margin-right: 0;
     }
-    .case2,.case3 {
-        display: none;
-    }
+
     .case1 p,.case2 p,.case3 p {
         width: 56.923vw;
         margin: auto;
@@ -1461,11 +1459,11 @@ img.FAQ {
     
     }
     .Q {
-        font-size: min(3.652vw,52.59px);
+        font-size: 5.128vw;
         font-weight: 700;
     }
     .question {
-        font-size: max(2.882vw,12px);
+        font-size: max(3.846vw,15px);
         line-height: 129%;
         width: 55vw;
         height: auto;
@@ -1474,7 +1472,7 @@ img.FAQ {
         margin-top: min(2.917vw,42px);
     }
     .FAQ_answer {
-        font-size: max(2.487vw,11px);
+        font-size: max(3.077vw,12px);
         line-height: 134%;
         margin-left: min(11.367vw,163.68px);
         width: 55.385vw;
@@ -1507,4 +1505,20 @@ img.FAQ {
     .cta_fixed_area img {
         margin-left: 9vw;
     }
+
+
+
+
+    .swiper-container {
+        position: relative;
+        overflow: hidden;
+      }
+      .swiper-container.visible {
+        overflow: visible;
+      }
+      .sample-swiper-cards {
+        padding: 0 50px;
+      }
+
+      
 }
