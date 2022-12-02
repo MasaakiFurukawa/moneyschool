@@ -54,6 +54,8 @@ body{
 .firstview  {
     width: 100%;
     height: min(72.8vw,1049px);
+    max-width: 1440px;
+    margin: auto;
 }
 .firstview img {
     width: min(96.2vw,1386.51px);
@@ -323,8 +325,8 @@ h5.smnr_title {
 }
 .learnable_case1,.learnable_case2,.learnable_case3,.learnable_case4 {
     flex: auto;
-    width: min(14.028vw,202px);
-    height: min(30.139vw,434px);
+    width: 25%;
+    height: auto;
 }
 .case_textarea {
     width: min(14.028vw,202px);
@@ -345,14 +347,14 @@ h5.smnr_title {
     width: min(10.681vw,153.8px);
     height: auto;
     margin-left: min(1.667vw,24px);
-    margin-bottom: min(-0.903vw,-13px);
+    margin-bottom: min(-1.015vw,-9px);
 }
 
 .learnable_case2 img {
     width: min(13.194vw,190px);
     height: auto;
     margin-left: min(0.347vw,5px);
-    margin-bottom: min(-1.250vw,-18px);
+    margin-bottom: min(-1vw,-18px);
     margin-top: min(8.889vw,128px);
 }
 .learnable_case3 img {
@@ -360,7 +362,7 @@ h5.smnr_title {
     height: auto;
     margin-left: min(2.847vw,41px);
     margin-bottom: min(-2.986vw,-43px);
-    margin-top: min(6.528vw,94px);
+    margin-top: min(7.73vw,97px);
 }
 .learnable_case4 img {
     width: min(11.424vw,164.5px);
@@ -616,7 +618,8 @@ img.FAQ {
     margin: 0 auto;
     z-index: 10;
     bottom: 15px;
-    left: min(24.583vw,354px);
+    left: 24.583vw;
+    right: 24.58vw;
     opacity: 0;
 }
 .cta_area img,.cta_fixed_area img {
@@ -723,7 +726,7 @@ img.FAQ {
 /*footer*/
 .footer {
     background-color: #fff;
-    padding-bottom: 15vw;
+    padding-bottom: min(15vw,216px);
 }
 .footer__inner {
     width: 95%;
@@ -733,7 +736,7 @@ img.FAQ {
     position: relative;
     padding-top: min(2.778vw,40px);
     background: #FFF;
-    height: 12vw;
+    height: min(12vw,173px);
     font-size: 12px;
 }
 .footer__credit {
